@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import Ani from './App';
+import {Fade} from './App';
+
 import registerServiceWorker from './registerServiceWorker';
 
 class App extends Component{
     constructor(props){
         super(props);
         this.state = {
-            show: false,
+            show: true,
             moli: {a:1, b:2}
         }
     }
@@ -35,18 +36,13 @@ class App extends Component{
         return (
             <div>
                 <button onClick={this.fadeClick}>click</button>
-                <Ani.Fade
-                    in={show}
-                />
-                {this.props.children()}
+                <Fade
+					in={show}
+				/>
             </div>
         )
     }
 }
-
-let a = function (a){
-    console.log(a);
-}(444)
 
 ReactDOM.render(
     <App>

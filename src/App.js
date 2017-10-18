@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Transition} from 'react-transition-group';
+import {Transition, TransitionGroup, CSSTransition} from 'react-transition-group';
 
 const duration = {enter: 400, exit: 2000};
 
@@ -12,20 +12,20 @@ const defaultStyle = {
 }
 
 const transitionStyles = {
-  entering: { opacity: 1 },
+  entering: { opacity: 0 },
   entered: { opacity: 1 }
 };
 
-function Fade({in: inProp}){
+export function Fade({in: inProp}){
     return (
         <Transition
             in={inProp}
             timeout={duration}
             // mountOnEnter={true}
             // unmountOnExit={true}
-            // appear={true}
+            appear={true}
             // enter={false}
-            exit={false}
+            // exit={false}
             // addEndListener={ ()=>{} }
             onEnter={e=>{console.log('onEnter');}}
         >
@@ -50,6 +50,6 @@ function Fade({in: inProp}){
     )
 }
 
-export default {
-    Fade
-};
+export function functionName() {
+
+}
