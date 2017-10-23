@@ -1,54 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-
-import {Fade} from './App';
-
 import registerServiceWorker from './registerServiceWorker';
 
-class App extends Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            show: true,
-            moli: {a:1, b:2}
-        }
-    }
 
-    fadeClick = ev => {
-        this.setState( ({show}) =>(
-            {show: !show}
-        ))
-        // this.setState( ({moli}) => {
-        //     return {moli: {...moli,a:5} }
-        // });
-        //
-        // this.setState(({moli})=>{return {moli: {...moli, b:6}} });
 
-    }
+import './example/transition/Tr';
 
-    componentDidUpdate(){
-        // console.log(this.state.moli);
-    }
+// import './example/transition/dayNight'
 
-    render(){
-        let {show} = this.state;
-
-        return (
-            <div>
-                <button onClick={this.fadeClick}>click</button>
-                <Fade
-					in={show}
-				/>
-            </div>
-        )
-    }
-}
-
-ReactDOM.render(
-    <App>
-        {
-            ()=>(<div>aaa</div>)
-        }
-    </App>
-    , document.getElementById('root'));
 registerServiceWorker();

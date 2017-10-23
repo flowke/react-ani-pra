@@ -1,0 +1,14 @@
+.fade-init{
+    padding: 20px;
+    width: 100px;
+    height: 50px;
+    background-color: rgb(61, 139, 159);
+    border: 1px solid #1993a3;
+    opacity: 0;
+    transition: 800ms;
+}
+
+
+.fade-entered{
+    opacity: 1;
+}

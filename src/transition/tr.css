@@ -1,0 +1,11 @@
+
+.fade-init{
+    transition: opacity 500ms ease-in-out;
+    opacity: 0;
+    padding: 20px;
+    display: inline-block;
+    background-color: #c5d787;
+}
+
+.fade-entering{opacity: 0;}
+.fade-entered{opacity: 1;}
